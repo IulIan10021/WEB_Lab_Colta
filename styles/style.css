@@ -97,7 +97,38 @@ body {
     position: relative;
     overflow: hidden;
 }
+.currency{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid white;
+    padding:  5px 10px;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 28px;
+    z-index: -1;
+    user-select: none;
+    transform:scale(1);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
 
+0%{
+    transform: scale(0.9);
+    box-shadow: 0 0 0 rgba(255,255,255,0.5);
+}
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255,255,255,0.5);
+    }
+    100%{
+        transform: scale(0.9);
+        box-shadow: 0 0 0 rgba(255,255,255,0.5);
+    }
+}
 .main-content {
     padding-top: 161px;
     padding-bottom: 200px;
@@ -285,7 +316,7 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.order-form-input.button.violet-button {
+.order-form-inputs.button.violet-button {
     width: 387px;
     height: 71px;
 }
