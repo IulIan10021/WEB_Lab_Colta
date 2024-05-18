@@ -1,25 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-@font-face{
+
+@font-face {
     font-family: 'Steppe-Book';
-    src:url('../fonts/Steppe-Book.ttf');
+    src: url('../fonts/Steppe-Book.ttf');
 }
-@font-face{
+
+@font-face {
     font-family: 'Steppe-ExtraBold';
-    src:url('../fonts/Steppe-ExtraBold.ttf');
+    src: url('../fonts/Steppe-ExtraBold.ttf');
 }
-body{
+
+body {
     background-color: #5243F4;
     font-family: 'Steppe-Book', sans-serif;
     color: white;
 }
-.container{
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
-.button{
+
+.button {
     background-color: white;
     border-radius: 60px;
     width: 178px;
@@ -32,141 +37,160 @@ body{
     outline: none;
     cursor: pointer;
 }
-.violet-button{
+
+.violet-button {
     background-color: #5243F4;
     color: white;
 }
-.button.violet-button:hover{
-    background-color: #1500ef;
 
+.button.violet-button:hover {
+    background-color: #1500ef;
 }
 
-.button .hover{
+.button:hover {
     background-color: #eeeeee;
 }
-.common-title{
+
+.common-title {
     font-family: 'Steppe-ExtraBold', sans-serif;
     font-size: 60px;
     line-height: 100%;
     text-align: center;
-
 }
-.header{
+
+.header {
     padding: 40px 0;
-
 }
-.header .container{
+
+.header .container {
     display: flex;
     align-items: center;
 }
-.logo img{
+
+.logo img {
     vertical-align: bottom;
 }
-.menu{
+
+.menu {
     margin-left: 250px;
 }
-.menu-list{
+
+.menu-list {
     list-style: none;
     display: flex;
     gap: 50px;
-    position: relative;
-
 }
-.menu-item a{
+
+.menu-item a {
     font-size: 16px;
-    line-height: 130px;
+    line-height: 130%;
     text-decoration: none;
     cursor: pointer;
     color: white;
 }
 
-.menu-list a:hover{
+.menu-item a:hover {
     border-bottom: 2px solid white;
 }
-.main-content{
-   padding-top:  161px;
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content {
+    padding-top: 161px;
     padding-bottom: 200px;
 }
+
 .main-info {
     max-width: 811px;
 }
 
-.main-title{
+.main-title {
     font-family: 'Steppe-ExtraBold', sans-serif;
     font-size: 90px;
     line-height: 100%;
     margin-bottom: 20px;
 }
+
 .main-text {
     max-width: 697px;
-   font-size: 18px;
+    font-size: 18px;
     line-height: 130%;
     margin-bottom: 40px;
 }
-.main-image{
+
+.main-image {
     position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
-
 }
-.products{
+
+.products {
     padding: 100px 0;
-
-
+    position: relative;
 }
-.products-items{
-   display: grid;
+
+.products-items {
+    display: grid;
     grid-template-columns: repeat(3, 384px);
     gap: 90px 24px;
-    justify-content: center; /* Centrează elementele orizontal */
-    align-items: center; /
-
+    margin-bottom: 110px;
 }
-.products-item{
+
+.products-item {
     background-color: white;
     color: #5D3427;
 }
-.products-item-image{
+
+.products-item-image {
     height: 202px;
     text-align: center;
-    margin-bottom: 50px;
 }
-.products-item-image img{
+
+.products-item-image img {
     height: 272px;
     top: -70px;
     position: relative;
     max-width: 100%;
 }
-.products-item-details{
+
+.products-item-details {
     padding: 24px;
 }
-.products-item-title{
+
+.products-item-title {
     font-family: 'Steppe-ExtraBold', sans-serif;
     font-size: 18px;
     margin-bottom: 20px;
 }
-.products-item-text{
+
+.products-item-text {
     height: 110px;
-font-size: 14px;
+    font-size: 14px;
     line-height: 120%;
     margin-bottom: 20px;
-
 }
-.products-item-extra{
+
+.products-item-extra {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.products-item-price{
+
+.products-item-price {
     font-family: 'Steppe-ExtraBold', sans-serif;
     color: #5243F4;
     font-size: 24px;
     margin-bottom: 10px;
 }
-.products-item-weight{
+
+.products-item-weight {
     font-size: 12px;
 }
+
 .love {
     padding: 64px 0 150px 0;
 }
@@ -175,9 +199,7 @@ font-size: 14px;
     margin-top: 40px;
     display: flex;
     gap: 20px;
-
 }
-
 
 .love-item {
     width: 590px;
@@ -209,39 +231,43 @@ font-size: 14px;
     height: auto;
     display: block;
 }
-.order .container{
+
+.order .container {
     position: relative;
+}
 
-    .order{
+.order {
     padding: 102px;
+    position: relative;
 }
 
-
-}
-.order-block{
+.order-block {
     margin-top: 104px;
-    background-color: rgb(255 255 255/30%);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(50px);
     display: flex;
 }
-.order-form{
+
+.order-form {
     margin-left: 200px;
     max-width: 387px;
-    padding: 40px 0 40px 0;
-    position: relative; /* Asigură că formularul se afișează peste imagine */
-
+    padding: 40px 0;
+    box-sizing: border-box;
 }
-.order-form-text{
+
+.order-form-text {
     font-family: 'Steppe-ExtraBold', sans-serif;
     font-size: 18px;
     line-height: 130%;
 }
-.order-form-text input{
+
+.order-form-input {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
-.order-form-input input {
+
+.order-form-inputs input {
     border: 1px solid white;
     border-radius: 60px;
     margin-bottom: 16px;
@@ -254,63 +280,62 @@ font-size: 14px;
     outline: none;
     color: white;
 }
+
 ::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
-.order-form-input::placeholder .button.violet-button{
+
+.order-form-input.button.violet-button {
     width: 387px;
     height: 71px;
 }
-.block-image{
+
+.block-image {
     height: 501px;
-    max-width: 109px;
+    margin-left: 109px;
 }
-.order-image{
+
+.order-image {
     height: 559px;
-    top:-58px;
+    top: -58px;
     position: relative;
 }
-.order-image img{
-    position: relative;
+
+.order-bg-image {
+    position: absolute;
     top: 0;
     right: calc(100% - 810px);
-    z-index: 1;
-
+    z-index: -1;
 }
-.footer{
+
+.footer {
     padding: 126px 0 50px 0;
     text-align: center;
 }
-.rights{
+
+.rights {
     margin-top: 14px;
-font-size: 18px;
-line-height: 130%;
+    font-size: 18px;
+    line-height: 130%;
 }
-.Line1{
+
+.Line1 {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asigură că imaginea acoperă întregul container */
+    left: calc(100% - 960px);
     z-index: -1;
 }
-.line2{
+
+.line2 {
     position: absolute;
     z-index: -1;
     top: -40px;
-    left:0;
-
+    left: 0;
 }
-.line3{
+
+.line3 {
     position: absolute;
     z-index: -1;
-    top: -960px;
-    left:0;
+    top: -920px;
+    left: 0;
 }
-
-
-
-
-
-
