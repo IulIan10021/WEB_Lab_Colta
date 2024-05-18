@@ -16,9 +16,8 @@ for (let i = 0; i < buttons.length; i++) {
     }
 }
 
-const prices: HTMLCollectionOf<Element> = document.getElementsByClassName ( classNames: "products-item-price");
-document.getElementById("change-currenty").onclick = function (e) {
-    const prices = document.getElementsByClassName("products-item-price");
+const prices = document.getElementsByClassName("products-item-price");
+document.getElementById("change-currency").onclick = function (e) {
     const currentCurrency = e.target.innerText;
     let newCurrency = "$";
     let coefficient = 1;
@@ -30,12 +29,38 @@ document.getElementById("change-currenty").onclick = function (e) {
         newCurrency = "BYN";
         coefficient = 3;
     } else if (currentCurrency === "BYN") {
-        newCurrency = "$";
-        coefficient = 1;
+        newCurrency = "€";
+        coefficient = 0.9;
+    } else if (currentCurrency === "€") {
+        newCurrency = "¥";
+        coefficient = 6.9;
     }
 
     e.target.innerText = newCurrency;
     for (let i = 0; i < prices.length; i++) {
-        prices[i].innerText = (prices[i].getAttribute("data-base-price") * coefficient).toFixed(1) + " " + newCurrency;
+        prices[i].innerText = (prices[i].getAttribute("data-base-prices") * coefficient).toFixed(1) + " " + newCurrency;
     }
 }
+ const model=document.getElementsByClassName("model");
+const name   =document.getElementsByClassName("name");
+const phone=document.getElementsByClassName("phone");
+document.getElementById("order-action").onclick = function () {
+    let hasError = false;
+    [model,name,phone].forEach((elem) => {
+        if(!item.value){
+            item.style.display = "red";
+            hasError=true;
+        }else{
+            item.style.display = "";
+        }
+    });
+    if(!hasError) {
+        [model, name, phone].forEach((elem) => {
+            item.value="";
+        });
+        alert("Thank you")
+    }
+}
+
+
+
