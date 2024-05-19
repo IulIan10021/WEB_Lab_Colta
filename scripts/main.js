@@ -38,24 +38,24 @@ document.getElementById("change-currency").onclick = function (e) {
 
     e.target.innerText = newCurrency;
     for (let i = 0; i < prices.length; i++) {
-        prices[i].innerText = (prices[i].getAttribute("data-base-prices") * coefficient).toFixed(1) + " " + newCurrency;
+        prices[i].innerText = +(prices[i].getAttribute("data-base-prices") * coefficient).toFixed(1) + " " + newCurrency;
     }
 }
- const model=document.getElementsByClassName("model");
-const name   =document.getElementsByClassName("name");
-const phone=document.getElementsByClassName("phone");
+ const model=document.getElementById("model");
+const name   =document.getElementById("name");
+const phone=document.getElementById("phone");
 document.getElementById("order-action").onclick = function () {
     let hasError = false;
-    [model,name,phone].forEach((elem) => {
+    [model,name,phone].forEach (item => {
         if(!item.value){
-            item.style.display = "red";
+            item.style.borderColor = "red";
             hasError=true;
         }else{
-            item.style.display = "";
+            item.style.borderColor = "";
         }
     });
     if(!hasError) {
-        [model, name, phone].forEach((elem) => {
+        [model, name, phone].forEach(item=> {
             item.value="";
         });
         alert("Thank you")
